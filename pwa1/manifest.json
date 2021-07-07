@@ -13,6 +13,6 @@
   "theme_color": "#004B93",
   "related_applications": [{
     "platform": "webapp",
-    "url": "/manifest.json"
+    "url": "https://nt1338.github.io/pwa1/manifest.json"
   }]
 }

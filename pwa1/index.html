@@ -69,7 +69,7 @@ function log(message) {
     navigator.getInstalledRelatedApps().then(function (relatedApps) {
         log('!!! getInstalledRelatedApps222', relatedApps);
         relatedApps.forEach((app) => {
-            log('!!! getInstalledRelatedApps',app.id, app.platform, app.url);
+            log('!!! getInstalledRelatedApps '+ app.id + ' '+ app.platform+ ' '+ app.url);
         })
     });
 </script>

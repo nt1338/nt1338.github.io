@@ -51,11 +51,27 @@ Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
 </p>
 
 <script>
-console.log('log!!!');
-document.getElementById("text").innerHTML = "Hello JavaScript!";
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./service-worker-pwa1.js', { scope: './' });
-    }
+function log(message) {
+	console.log(message);
+	const el = document.getElementById("text");
+	el.innerHTML = el.innerHTML + "  "+message;
+}
+
+
+	console.log('log!!!');
+	log('Hello JavaScript!');
+	//document.getElementById("text").innerHTML = "Hello JavaScript!";
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('./service-worker-pwa1.js', { scope: './' });
+	}
+
+   log('!!! getInstalledRelatedApps111');
+    navigator.getInstalledRelatedApps().then(function (relatedApps) {
+        log('!!! getInstalledRelatedApps222', relatedApps);
+        relatedApps.forEach((app) => {
+            log('!!! getInstalledRelatedApps',app.id, app.platform, app.url);
+        })
+    });
 </script>
 
 </body>

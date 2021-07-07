@@ -10,5 +10,9 @@
   ],
   "start_url": "/pwa1/",
   "display": "standalone",
-  "theme_color": "#004B93"
+  "theme_color": "#004B93",
+  "related_applications": [{
+    "platform": "webapp",
+    "url": "https://nt1338.github.io/pwa1/manifest.json"
+  }]
 }
